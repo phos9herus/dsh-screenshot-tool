@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Screenshot to Session",
+    "description": "From the composer + menu, hide the DSH window, capture the desktop, crop and annotate it, then attach the image to the current DSH session."
+  }
+}

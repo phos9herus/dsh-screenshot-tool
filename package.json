@@ -1,0 +1,54 @@
+{
+  "name": "dsh-screenshot-tool",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Screenshot from the composer + menu: collapse the DSH window, capture the desktop, crop, annotate, and attach the image to the current session.",
+  "author": "phos9herus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phos9herus/dsh-screenshot-tool.git"
+  },
+  "homepage": "https://github.com/phos9herus/dsh-screenshot-tool#readme",
+  "bugs": {
+    "url": "https://github.com/phos9herus/dsh-screenshot-tool/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "screenshot",
+    "capture",
+    "annotate",
+    "windows"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-attachment"
+      ]
+    }
+  }
+}
